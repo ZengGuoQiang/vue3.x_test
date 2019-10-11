@@ -27,3 +27,14 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
+##HelloWorld详解
+
+使用typescript 可用@修饰符
+
+新组件通过 components 导入
+
+数据data直接写入 定义他的类型
