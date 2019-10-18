@@ -49,15 +49,16 @@ store/type.ts
     泛型：可重用的组件  其放回的类型和输入的类型必须相同
 
 store/count/actions.ts
+    先引入实参 和泛型参数 
+    定义一个参数 继承ActionTree ActionTree有两个参数 一个真实参数num  一个泛型参数countNum
+    ActionTree<实参，泛型参>={ 使用commit调用mutation的函数 ， 用逗号隔开 }
     通过vuex中的commit调用来执行 mutations中的函数
     commit(String,arg) string为执行函数的名称 increments; arg为传入的参数 count
-    将actions提出单独的文件 需要使用ActionTree用作export的导出
-    ActionTree有两个参数 一个真实参数num  一个泛型参数countNum
 
 store/count/mutations.ts
     vuex的执行者 
     将mutations提出单独的文件 通过MutationTree用作export导出
-    MutationTree一个参数 需要变动的参数 num
+    MutationTree一个参数 需要变动的参数 num实参
 
 store/count/index.ts
     将所有的vuex步骤集合成一个文件中

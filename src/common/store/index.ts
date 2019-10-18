@@ -1,14 +1,9 @@
-import Vue from "vue"
-import Vuex,{StoreOptions} from 'vuex'
-import {countNum} from './types'
-import { addNum } from './count/index'
+import countStore from './countStore'
+import userStore from './loginstore'
 
-Vue.use(Vuex)
-
-const store:StoreOptions<countNum>={
-    modules:{
-        addNum
-    }
+var Store = {
+    countStore,
+    userStore
 }
 
-export default new Vuex.Store<countNum>(store)
+export default  Store
