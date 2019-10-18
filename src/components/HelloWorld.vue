@@ -16,8 +16,6 @@ const addCount = namespace('addNum')
 export default class HelloWorld extends Vue {
 	@Prop() private msg!: string;
 	//data数据
-
-
 	@addCount.Action('increment') public increment!:Function
 	@addCount.State('nums') public nums!:number
 
