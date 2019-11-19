@@ -14,9 +14,6 @@ export default class setUp extends Vue{
     constructor(props:any){
         super(props);
         this.sums = this.sums.bind(this)
-        data:{
-            sum2:0
-        }
     }
     data={
         sum:0

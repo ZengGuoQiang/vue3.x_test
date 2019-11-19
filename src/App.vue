@@ -1,13 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/setup">Setup</router-link>
+      <router-link v-for="item in menu" v-bind:key="item.component.cid" :to={path:item.path}>{{item.name}}|</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+<script lang="ts">
+	import Vue from 'vue'
+	// let menu = (routerList as VueRouter)
+	export default Vue.extend({
+		data(){
+			return {
+				menu:this.$router
+			}
+		},
+		beforeMount:function(){
+			//设置初始化头部 目录
+			this.$set(this.$data,"menu",this.$data.menu.options.routes)
+		}
+	})
+// v-for="item in menu" v-bind:key="item.name"
+</script>
 
 <style lang="scss">
 #app {

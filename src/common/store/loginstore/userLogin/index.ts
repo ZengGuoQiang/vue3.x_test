@@ -7,7 +7,7 @@ import { userState } from '../types'
 const namespaced  =true
 
 const state:userInfo = {
-    userName: "",
+    userName: "admin",
     password: "",
     email: "",
     age: 0
